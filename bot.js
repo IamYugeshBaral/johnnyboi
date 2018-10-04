@@ -12,7 +12,7 @@ bot.on('message', (message) => {
    };
    
    if(message.content == "!requestsoff") {
-      if (message.member.roles.find(role => role.name === "DiscordRequestsOn"); {
+      if (message.member.roles.find(role => role.name === "DiscordRequestsOn")) {
          var role = message.guild.roles.find(role => role.name === "DiscordRequestsOn")
          message.member.removeRole(role)
       } else {
