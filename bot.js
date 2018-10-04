@@ -10,4 +10,21 @@ bot.on('message', (message) => {
    if(message.content == "!verifyhelp") {
      message.reply('be sure to check out #welcome to learn how to verify!')
    };
+   
+   if(message.content == "!requestsoff") {
+      if (message.member.roles.find('name','DiscordRequestsOn')) {
+         var role = message.guild.roles.find('name','DiscordRequestsOn')
+         user.removeRole(role)
+      } else {
+         message.reply('they are all ready off!')
+      };
+   };
+   if(message.content == "!requestson") {
+      if (message.member.roles.find('name','DiscordRequestsOn')) {
+         message.reply('you already have them on!')
+      } else {
+         var role = message.guild.roles.find('name','DiscordRequestsOn')
+         message.author.addRole(role)
+      };
+   };
 });
