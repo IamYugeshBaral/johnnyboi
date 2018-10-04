@@ -12,7 +12,7 @@ bot.on('message', (message) => {
    };
    
    if(message.content == "!requestsoff") {
-      if (message.member.roles.find(role => "DiscordRequestsOn")) {
+      if (message.member.roles.find('name' => "DiscordRequestsOn")) {
          var role = message.guild.roles.find(role => "DiscordRequestsOn")
          message.member.removeRole(role)
       } else {
@@ -20,7 +20,7 @@ bot.on('message', (message) => {
       };
    };
    if(message.content == "!requestson") {
-      if (message.member.roles.find(role => "DiscordRequestsOn")) {
+      if (message.member.roles.find('name' => "DiscordRequestsOn")) {
          message.reply('you already have them on!')
       } else {
          var role = message.guild.roles.find(role => "DiscordRequestsOn")
