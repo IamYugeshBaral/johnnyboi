@@ -16,7 +16,7 @@ bot.on('message', (message) => {
          var role = message.guild.roles.find('name','DiscordRequestsOn')
          user.removeRole(role)
       } else {
-         message.reply('they are all ready off!')
+         message.reply('your requests are allready off!')
       };
    };
    if(message.content == "!requestson") {
