@@ -1,4 +1,4 @@
-import { User } from 'discord.js';
+import { User } from "discord.js";
 
 const Discord = require('discord.js');
 
