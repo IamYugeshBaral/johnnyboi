@@ -1,5 +1,3 @@
-import { User } from "discord.js";
-
 const Discord = require('discord.js');
 
 const bot = new Discord.Client();
@@ -32,10 +30,10 @@ bot.on('message', (message) => {
    if(message.channel.name == "verification-channel") {
     const args = message.content.slice().trim().split(/ +/g);
     var id = args[2]
-    if(message.guild.members.find(User => User.id === id)) {
-      var member = message.guild.members.find(User => User.id === id)
-      if (member.roles.find(role => role.name === "DiscordRequestsOn")) {
-        member.sendMessage("A discord to roblox account request has been sent by "+message.member.displayName+", please answer yes or no if you would like to set this as your roblox account!")
+    if(message.guild.members.find(member => member.id === id)) {
+      var mem = message.guild.members.find(member => member.id === id)
+      if (mem.roles.find(role => role.name === "DiscordRequestsOn")) {
+        mem.sendMessage("A discord to roblox account request has been sent by "+message.member.displayName+", please answer yes or no if you would like to set this as your roblox account!")
       };
     };
   };
